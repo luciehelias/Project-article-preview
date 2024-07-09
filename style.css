@@ -48,6 +48,8 @@ p {
 
 button {
   background-color: hsl(hsl(212, 23%, 69%));
+  border-radius: 100%;
+  border: none;
 }
 
 .article-preview {
@@ -56,6 +58,10 @@ button {
 
 .person-article p {
   color: hsl(212, 23%, 69%);
+}
+
+.image-person {
+  border-radius: 100%;
 }
 
 .share-components {
