@@ -14,17 +14,16 @@ main {
   min-width: 100vw;
   font-family: "Manrope", sans-serif;
   background-color: hsl(210, 46%, 95%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-/* img {
-  width: 100%;
-  height: 100%;
-} */
 
 h1 {
   color: hsl(217, 19%, 35%);
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
+  padding-bottom: 15px;
 }
 
 h2 {
@@ -50,11 +49,44 @@ button {
   background-color: hsl(hsl(212, 23%, 69%));
   border-radius: 100%;
   border: none;
-  padding: 5px;
+  padding: 8px;
 }
 
-.article-preview {
+.article {
   background-color: white;
+  width: 800px;
+  display: flex;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image-article {
+  width: 400px;
+}
+
+.image-article img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+
+.text-article {
+  padding: 40px;
+}
+
+.text-article p {
+  padding-bottom: 20px;
+}
+
+.person {
+  display: flex;
+  justify-content: space-between;
+}
+
+.person-article {
+  display: flex;
 }
 
 .person-article p {
@@ -63,10 +95,23 @@ button {
 
 .image-person {
   border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.information-person {
+  display: flex;
+  flex-direction: column;
+}
+
+.icons-share {
+  justify-self: flex-end;
 }
 
 .share-components {
   background-color: hsl(214, 17%, 51%);
+  display: none;
 }
 
 .attribution {
