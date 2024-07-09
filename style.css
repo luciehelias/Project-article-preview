@@ -50,6 +50,7 @@ button {
   background-color: hsl(hsl(212, 23%, 69%));
   border-radius: 100%;
   border: none;
+  padding: 5px;
 }
 
 .article-preview {
