@@ -13,11 +13,44 @@ main {
   min-height: 100vh;
   min-width: 100vw;
   font-family: "Manrope", sans-serif;
+  background-color: hsl(210, 46%, 95%);
 }
 
-img {
+/* img {
   width: 100%;
   height: 100%;
+} */
+
+h1 {
+  color: hsl(217, 19%, 35%);
+}
+
+h2 {
+  color: hsl(217, 19%, 35%);
+}
+
+h3 {
+  color: hsl(212, 23%, 69%);
+}
+
+p {
+  color: hsl(217, 19%, 35%);
+}
+
+button {
+  background-color: hsl(hsl(212, 23%, 69%));
+}
+
+.article-preview {
+  background-color: white;
+}
+
+.person-article p {
+  color: hsl(212, 23%, 69%);
+}
+
+.share-components {
+  background-color: hsl(214, 17%, 51%);
 }
 
 .attribution {
