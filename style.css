@@ -12,6 +12,7 @@
 main {
   min-height: 100vh;
   min-width: 100vw;
+  font-family: "Manrope", sans-serif;
 }
 
 img {
