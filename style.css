@@ -21,9 +21,10 @@ main {
 
 h1 {
   color: hsl(217, 19%, 35%);
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   padding-bottom: 15px;
+  line-height: 1.5;
 }
 
 h2 {
@@ -43,6 +44,7 @@ p {
   color: hsl(217, 19%, 35%);
   font-size: 13px;
   font-weight: 500;
+  line-height: 1.75;
 }
 
 button {
@@ -54,15 +56,14 @@ button {
 
 .article {
   background-color: white;
-  width: 800px;
+  width: 720px;
   display: flex;
-  position: relative;
   border-radius: 10px;
   overflow: hidden;
 }
 
 .image-article {
-  width: 400px;
+  width: 280px;
 }
 
 .image-article img {
@@ -73,7 +74,8 @@ button {
 }
 
 .text-article {
-  padding: 40px;
+  padding: 30px 45px;
+  width: 440px;
 }
 
 .text-article p {
@@ -103,6 +105,10 @@ button {
 .information-person {
   display: flex;
   flex-direction: column;
+}
+
+.information-person p {
+  padding: 0;
 }
 
 .icons-share {
