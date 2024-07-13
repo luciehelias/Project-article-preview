@@ -120,6 +120,14 @@ button {
   justify-self: flex-end;
 }
 
+.icons-share:active {
+  background-color: hsl(217, 19%, 35%);
+}
+
+.icons-share:focus {
+  background-color: hsl(217, 19%, 35%);
+}
+
 .share-components {
   background-color: hsl(217, 19%, 35%);
   position: absolute;
