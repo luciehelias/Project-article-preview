@@ -1,19 +1,17 @@
 const shareButton = document.querySelector(".icons-share");
-const shareSVG = document.querySelector (".share-button");
-
-console.log (shareSVG)
-const shareItems = document.querySelector(".share-components");
+const shareSVG = document.querySelector (".button-svg");
+const shareItem = document.querySelector(".share-component");
 const shareImage = document.querySelector(".share-image")
 
 shareButton.addEventListener('click', function(){
-shareItems.style.display = "flex";
+shareItem.style.display = "flex";
 shareSVG.style.fill ="white";
 });
 
 document.addEventListener('click', function(event) {
     const targetElement = event.target;
-    if (!shareButton.contains(targetElement) && !shareItems.contains(targetElement)) {
-      shareItems.style.display = "none";
-      
+    if (!shareButton.contains(targetElement) && !shareItem.contains(targetElement)) {
+      shareItem.style.display = "none";
+      shareSVG.style.fill = "#6E8098";
     }
   });
