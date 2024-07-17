@@ -129,7 +129,7 @@ button {
   background-color: hsl(217, 19%, 35%);
 }
 
-.share-component {
+.share-component-desktop {
   background-color: hsl(217, 19%, 35%);
   position: absolute;
   display: none;
@@ -144,7 +144,7 @@ button {
   left: 260px;
 }
 
-.share-component::after {
+.share-component-desktop::after {
   content: "";
   position: absolute;
   top: 40px;
@@ -211,7 +211,7 @@ button {
     left: 0px;
   }
 
-  .share-component::after {
+  .share-component-desktop::after {
     display: none;
   }
 }
