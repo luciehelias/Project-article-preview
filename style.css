@@ -161,3 +161,57 @@ button {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+@media (max-width: 800px) {
+  .article {
+    width: 320px;
+    height: 510px;
+    flex-direction: column;
+  }
+
+  .article-image {
+    width: 320px;
+    height: 200px;
+  }
+
+  .article-image img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+  }
+
+  .article-text {
+    padding: 30px 30px 15px 30px;
+    width: 320px;
+    height: 310px;
+  }
+
+  h1 {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  p {
+    font-size: 13.1px;
+    line-height: 1.65;
+  }
+
+  .article-text p {
+    padding-bottom: 25px;
+  }
+
+  .share-component {
+    display: flex;
+    border-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 320px;
+    height: 60px;
+    top: 255px;
+    left: 0px;
+  }
+
+  .share-component::after {
+    display: none;
+  }
+}
