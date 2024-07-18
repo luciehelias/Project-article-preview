@@ -116,16 +116,16 @@ button {
   padding: 0;
 }
 
-.icons-share {
+.icons-share-desktop {
   justify-self: flex-end;
   cursor: pointer;
 }
 
-.icons-share:active {
+.icons-share-desktop:active {
   background-color: hsl(217, 19%, 35%);
 }
 
-.icons-share:focus {
+.icons-share-desktop:focus {
   background-color: hsl(217, 19%, 35%);
 }
 
@@ -154,6 +154,10 @@ button {
   border-color: hsl(217, 19%, 35%) transparent transparent transparent;
 }
 
+.share-mobile {
+  display: none;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -164,13 +168,13 @@ button {
 
 @media (max-width: 800px) {
   .article {
-    width: 320px;
+    width: 330px;
     height: 510px;
     flex-direction: column;
   }
 
   .article-image {
-    width: 320px;
+    width: 330px;
     height: 200px;
   }
 
@@ -182,7 +186,7 @@ button {
 
   .article-text {
     padding: 30px 30px 15px 30px;
-    width: 320px;
+    width: 330px;
     height: 310px;
   }
 
@@ -205,7 +209,7 @@ button {
     border-radius: 0px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    width: 320px;
+    width: 330px;
     height: 60px;
     top: 255px;
     left: 0px;
@@ -213,5 +217,42 @@ button {
 
   .share-component-desktop::after {
     display: none;
+  }
+
+  .share-mobile {
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 330px;
+    /* height: 60px; */
+    background-color: hsl(217, 19%, 35%);
+    padding: 20px 10px 15px 10px;
+    top: 0px;
+  }
+
+  .share-component-mobile {
+    display: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 230px;
+    align-items: center;
+  }
+
+  .article-text {
+    padding-bottom: 0px;
+  }
+
+  .person {
+    display: flex;
+  }
+
+  .article-text p {
+    padding-bottom: 15px;
+    font-size: 13.7px;
+  }
+
+  h1 {
+    font-size: 17px;
   }
 }

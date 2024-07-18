@@ -1,30 +1,49 @@
-const shareButton = document.querySelector(".icons-share");
+const shareButtonDesktop = document.querySelector(".icons-share-desktop");
+const shareButtonMobile = document.querySelector(".icons-share-mobile");
 const shareSVG = document.querySelector (".button-svg");
 const shareItemDesktop = document.querySelector(".share-component-desktop");
-const shareImage = document.querySelector(".share-image")
+const shareItemsMobile = document.querySelector(".share-component-mobile");
+const shareMobile = document.querySelector(".share-mobile");
+const person = document.querySelector(".person");
 
-shareButton.addEventListener('click', function(){
-shareItemDesktop.style.display = "flex";
-shareSVG.style.fill ="white";
-});
+const mediaQuery = window.matchMedia('(max-width: 800px)');
 
-document.addEventListener('click', function(event) {
-    const targetElement = event.target;
-    if (!shareButton.contains(targetElement) && !shareItemDesktop.contains(targetElement)) {
-      shareItemDesktop.style.display = "none";
-      shareSVG.style.fill = "#6E8098";
-    }
-  });
+function handleMediaQueryChange(e){
+  if (e.matches){
+    shareButtonDesktop.addEventListener('click',function(){
+      shareMobile.style.display="flex";
+      person.style.display="none";
+      shareSVG.style.fill ="white";
+      shareItemsMobile.style.display="flex";
+    });
 
-//   function changeAppearance (e) {
-// if (e.matches){
-//   document.querySelector('component-mobile').style.display = "flex";
-//   document.querySelector('share-component-desktop').style.display = "none";
-// } else {
-//   document.querySelector('component-mobile').style.display = "none";
-//   document.querySelector('share-component-desktop').style.display = "flex";
-// }}
+    //  document.addEventListener('click', function(event) {
+    //    const targetElement = event.target;
+    //    if (!shareButtonMobile.contains(targetElement) && !shareItemsMobile.contains(targetElement)) {
+    //      shareItemsMobile.style.display = "none";
+    //      shareMobile.style.display="none";
+    //   person.style.display="flex";
+    //   }
+    // });
+    
+  }else {
+    shareButtonDesktop.addEventListener('click', function(){
+      shareItemDesktop.style.display = "flex";
+      shareSVG.style.fill ="white";
+      });
 
-// const mediaQuery = window.matchMedia('(max-width: 800px)');
-//         mediaQuery.addListener(changeAppearance);
-//         changeAppearance(mediaQuery);
+     document.addEventListener('click', function(event) {
+        const targetElement = event.target;
+        if (!shareButtonDesktop.contains(targetElement) && !shareItemDesktop.contains(targetElement)) {
+          shareItemDesktop.style.display = "none";
+          shareSVG.style.fill = "#6E8098";
+        }
+      });
+  }
+}
+
+handleMediaQueryChange(mediaQuery);
+mediaQuery.addEventListener('change', handleMediaQueryChange);
+
+
+
