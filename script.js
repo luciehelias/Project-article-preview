@@ -15,23 +15,22 @@ function handleMediaQueryChange(e){
       person.style.display="none";
       shareSVG.style.fill ="white";
       shareItemsMobile.style.display="flex";
+      shareItemDesktop.style.display="none";
     });
 
-    //  document.addEventListener('click', function(event) {
-    //    const targetElement = event.target;
-    //    if (!shareButtonMobile.contains(targetElement) && !shareItemsMobile.contains(targetElement)) {
-    //      shareItemsMobile.style.display = "none";
-    //      shareMobile.style.display="none";
-    //   person.style.display="flex";
-    //   }
-    // });
-    
+    shareButtonMobile.addEventListener('click', function(){
+      shareMobile.style.display="none";
+      person.style.display="flex";
+      shareSVG.style.fill = "#6E8098"
+    });
+
   }else {
     shareButtonDesktop.addEventListener('click', function(){
       shareItemDesktop.style.display = "flex";
       shareSVG.style.fill ="white";
+      shareMobile.style.display="none";
       });
-
+      
      document.addEventListener('click', function(event) {
         const targetElement = event.target;
         if (!shareButtonDesktop.contains(targetElement) && !shareItemDesktop.contains(targetElement)) {
