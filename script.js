@@ -25,7 +25,7 @@ function handleMediaQueryChange(e) {
     });
   } else {
     shareButtonDesktop.addEventListener("click", function () {
-      // shareItemDesktop.style.display = "flex";
+      shareItemDesktop.style.display = "flex";
       shareSVG.style.fill = "white";
       shareMobile.style.display = "none";
     });
